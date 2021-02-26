@@ -1,0 +1,6 @@
+README.md
+setup.py
+krimpatool.egg-info/PKG-INFO
+krimpatool.egg-info/SOURCES.txt
+krimpatool.egg-info/dependency_links.txt
+krimpatool.egg-info/top_level.txt
