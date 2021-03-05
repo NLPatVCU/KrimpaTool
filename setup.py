@@ -1,4 +1,4 @@
-import setuptools
+import setuptools, paperscraper
 
 def readme():
     with open('README.md') as f:
