@@ -1,19 +1,22 @@
 import getopt
 import sys
 
+
 from requests import get
 
 from paperscraper import PaperScraper
+from pdf2txt import PDF2TXT
 
 scraper = PaperScraper()
+p2t = PDF2TXT()
 
 
-def url_from_doi(doi):
+def txt_from_doi(doi):
     doi_link = "https://doi.org/" + doi
     r = get(doi_link, allow_redirects=True)
     print(r.url)
-    text = print(scraper.extract_from_url(r.url)['pdf_url'])
-    print(text)
+    pdf = print(scraper.extract_from_url(r.url)['pdf_url'])
+    text = p2t.file_convert(pdf)
     return text
 
 
@@ -30,7 +33,7 @@ def main():
         for opt, arg in opts:
             if opt in ["-d"]:
                 doi = sys.argv[2]
-                url_from_doi(doi)
+                txt_from_doi(doi)
     else:
         print("Must include '-d <doi>' ")
 
