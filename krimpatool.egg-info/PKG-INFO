@@ -6,8 +6,9 @@ Home-page: UNKNOWN
 Author: Shaandro Sarkar, Bridget McInnes
 Author-email: sssarkar@vcu.edu
 License: UNKNOWN
-Description: # Krimpatool
-        Returns a PDF URL from a DOI.
+Description: # KrimpaTool
+        A tool for retrieving full text of papers from a DOI
+        
 Platform: UNKNOWN
 Classifier: Development Status :: 4 - Beta
 Classifier: License :: OSI Approved :: GNU General Public License (GPL)
